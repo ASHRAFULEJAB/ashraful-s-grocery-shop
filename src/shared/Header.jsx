@@ -113,7 +113,7 @@ const Header = () => {
                text-white transition duration-200 rounded shadow-md bg-sky-500
                 hover:bg-sky-600 focus:shadow-outline focus:outline-none"
                 >
-                  Sign in
+                  Login
                 </Link>
               </li>
               <li>
@@ -124,7 +124,7 @@ const Header = () => {
                 hover:bg-sky-600 focus:shadow-outline focus:outline-none"
                   aria-label="Sign up"
                 >
-                  Sign Up
+                  Register
                 </Link>
               </li>
               
@@ -243,7 +243,7 @@ const Header = () => {
                         h-12 px-6 font-medium tracking-wide text-white transition 
                         duration-200 rounded shadow-md bg-sky-500 hover:bg-sky-600 focus:shadow-outline focus:outline-none"
                           >
-                            Sign in
+                           Login
                           </Link>
                         </li>
                         <li>
@@ -254,7 +254,7 @@ const Header = () => {
                         duration-200 rounded shadow-md bg-sky-500 hover:bg-sky-600 focus:shadow-outline focus:outline-none"
                             aria-label="Sign up"
                           >
-                            Sign Up
+                            Register
                           </Link>
                         </li>
                         
