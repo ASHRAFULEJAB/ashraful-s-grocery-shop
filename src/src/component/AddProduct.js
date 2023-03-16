@@ -1,3 +1,4 @@
+
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
@@ -11,6 +12,7 @@ const AddProduct = () => {
   const imagebbKEY = process.env.REACT_APP_IMAGEBB_KEY;
   const navigate = useNavigate();
   const { user } = useContext(UserAuthContext);
+
 
   const imageHostKey = "f04df4e1343869002a97bc435ec536f7";
   //   const url = `https://mall-of-recondition-laptops-server.vercel.app/users/email?email=${user?.email}`;
@@ -48,11 +50,13 @@ const AddProduct = () => {
         const product = {
           ...data,
           image: imgData.data.url,
-        };
+
+        }
 
         console.log(product);
 
-        dispatch(addToProduct(product));
+        dispatch(addToProduct(product))
+
       });
   };
 
@@ -116,10 +120,7 @@ const AddProduct = () => {
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3 mb-6 md:mb-0">
-              <label
-                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                htmlFor="image"
-              >
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="image">
                 Quantity
               </label>
               <input
@@ -127,7 +128,7 @@ const AddProduct = () => {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="image"
                 type="number"
-                name="stock"
+                name='stock'
                 required
               />
             </div>

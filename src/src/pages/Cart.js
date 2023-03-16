@@ -3,7 +3,11 @@ import { useSelector } from "react-redux";
 import SingleCart from "../component/SingleCart";
 
 const Cart = () => {
-  const { cart } = useSelector((state) => state.cart);
+  const { cart } = useSelector((state) => state.cart)
+
+
+
+
 
   return (
     <div>
@@ -28,9 +32,9 @@ const Cart = () => {
                 Total
               </h3>
             </div>
-            {cart.map((carts) => (
-              <SingleCart carts={carts} key={carts.id}></SingleCart>
-            ))}
+            {
+              cart.map(carts => <SingleCart carts={carts} key={carts.id} ></SingleCart>)
+            }
 
             <a
               href="/"

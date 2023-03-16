@@ -30,6 +30,7 @@ const HomeCard = () => {
         </h1>
         <div className="grid max-w-screen-lg gap-8 row-gap-5 md:row-gap-8 sm:mx-auto lg:grid-cols-2">
           {dataFetch}
+
         </div>
       </div>
     </div>

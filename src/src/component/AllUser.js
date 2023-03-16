@@ -66,7 +66,10 @@ const AllUser = () => {
   //   ));
   // }
 
-  const { users } = useSelector((state) => state.users);
+
+  const { users } = useSelector((state) => state.users)
+
+
 
   return (
     <div>
@@ -309,8 +312,8 @@ const AllUser = () => {
                       </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
-                      {users.map((user) => (
-                        <tr>
+                      {
+                        users.map(user => <tr>
                           <td class="px-4 py-4 text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
                             <div class="inline-flex items-center gap-x-3">
                               <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
@@ -330,11 +333,9 @@ const AllUser = () => {
                             </div>
                           </td>
                           <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                            {!email && (
-                              <p class="text-xs font-normal text-gray-600 dark:text-gray-100">
-                                {user.email}
-                              </p>
-                            )}
+                            {!email && <p class="text-xs font-normal text-gray-600 dark:text-gray-100">
+                              {user.email}
+                            </p>}
                           </td>
 
                           <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
@@ -382,8 +383,8 @@ const AllUser = () => {
                               </button>
                             </div>
                           </td>
-                        </tr>
-                      ))}
+                        </tr>)
+                      }
 
                       {/* <tr>
                       <td class="px-4 py-4 text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">

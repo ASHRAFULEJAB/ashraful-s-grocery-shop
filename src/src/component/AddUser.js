@@ -12,10 +12,12 @@ const AddUser = () => {
   const imagebbKEY = process.env.REACT_APP_IMAGEBB_KEY;
   const navigate = useNavigate();
   const { user } = useContext(UserAuthContext);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   const handleAddProduct = (e) => {
     const imageHostKey = "f04df4e1343869002a97bc435ec536f7";
+
+
 
     e.preventDefault();
     const form = e.target;
@@ -44,7 +46,8 @@ const AddUser = () => {
     };
     console.log(user);
 
-    dispatch(addToUser(user));
+    dispatch(addToUser(user))
+
   };
 
   return (
