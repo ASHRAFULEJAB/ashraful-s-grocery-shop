@@ -127,12 +127,7 @@ const Header = () => {
                   Sign Up
                 </Link>
               </li>
-              <button
-                className="bg-gray-100 p-4 rounded-3xl ml-2"
-                onClick={handleThemeSwitch}
-              >
-                <FaLightbulb className="text-gray-800 h-6 w-6" />
-              </button>
+              
             </>
           )}
         </ul>
@@ -222,15 +217,7 @@ const Header = () => {
                         Dashboard
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="/blog"
-                        aria-label="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
-                      >
-                        Blog
-                      </Link>
-                    </li>
+                    
                     {user?.uid ? (
                       <>
                         <li onClick={handleLogout}>
@@ -270,12 +257,7 @@ const Header = () => {
                             Sign Up
                           </Link>
                         </li>
-                        <button
-                          className="bg-gray-100 p-4 rounded-3xl ml-2"
-                          onClick={handleThemeSwitch}
-                        >
-                          <FaLightbulb className="text-gray-800 h-6 w-6" />
-                        </button>
+                        
                       </>
                     )}
                   </ul>
