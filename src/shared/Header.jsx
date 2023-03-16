@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import logo from '../assets/add-to-cart.png';
+import logo from "../assets/add-to-cart.png";
 import { Link } from "react-router-dom";
 import { FaLightbulb } from "react-icons/fa";
 import { UserAuthContext } from "../contexts/AuthContext/AuthProvider";
@@ -29,13 +29,12 @@ const Header = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-
-const { user, userLogout } = useContext(UserAuthContext);
-const handleLogout = () => {
-  userLogout()
-    .then(() => {})
-    .catch((e) => console.log(e));
-};
+  const { user, userLogout } = useContext(UserAuthContext);
+  const handleLogout = () => {
+    userLogout()
+      .then(() => {})
+      .catch((e) => console.log(e));
+  };
 
   return (
     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -71,24 +70,21 @@ const handleLogout = () => {
                 Cart
               </Link>
             </li>
-            <li>
-              <Link
-                to="/dashboard"
-                aria-label="Product pricing"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
-              >
-                DashBoard
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                aria-label="About us"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
-              >
-                Blog
-              </Link>
-            </li>
+            {user?.email === "admin@example.com" && (
+              <>
+                <li>
+                  <Link
+                    to="/dashboard"
+                    aria-label="Product pricing"
+                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
+                  >
+                    DashBoard
+                  </Link>
+                </li>
+              </>
+            )}
+
+           
           </ul>
         </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">
